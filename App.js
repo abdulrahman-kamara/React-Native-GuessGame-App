@@ -2,10 +2,11 @@ import { StyleSheet, View } from "react-native";
 import { useState } from "react";
 import Header from "./Components/Header";
 import StartGameScreen from "./Screens/StartGameScreen";
-import GameScreen from "./Components/GameScreen";
-import GameOver from "./Screens/GameOver";
+import GameScreen from "./Screens/GameScreen";
+import GameOverScreen from "./Screens/GameOverScreen";
 import * as Font from "expo-font";
 import AppLoading from "expo-app-loading";
+// import * as ScreenOrientation from "expo-screen-orientation";
 
 //this is a functionor a method on the font package that allows to load font
 // And what you pass load asyc is an object where you tell expo about all the font you want to load
@@ -17,6 +18,7 @@ const fetchFont = () => {
 };
 
 export default function App() {
+  // ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT);
   const [userNumber, setUserNumber] = useState();
   const [guessRounds, setGuessRounds] = useState(0);
   const [dataLoaded, setDataLoaded] = useState(false);
@@ -51,7 +53,7 @@ export default function App() {
     );
   } else if (guessRounds > 0) {
     content = (
-      <GameOver
+      <GameOverScreen
         roundsNumber={guessRounds}
         userNumber={userNumber}
         onRestart={startNewGameHandle}
