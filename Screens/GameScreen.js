@@ -13,7 +13,7 @@ import PrimaryButton from "../Components/PrimaryButton";
 import { Ionicons } from "@expo/vector-icons";
 import BodyText from "../Components/BodyText";
 
-//This process is called recursion
+//This process is called recursion which allows you to generate random numbers 
 const generateRandomNumber = (min, max, execlude) => {
   min = Math.ceil(min);
   max = Math.floor(max);
