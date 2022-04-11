@@ -11,6 +11,9 @@ import BodyText from "../Components/BodyText";
 import TitleText from "../Components/TitleText";
 import PrimaryButton from "../Components/PrimaryButton";
 
+
+// The is the gameover screen 
+
 const GameOverScreen = (props) => {
   return (
     <ScrollView>
